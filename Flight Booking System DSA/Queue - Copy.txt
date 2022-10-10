@@ -1,0 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assign_queue;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ *
+ * @author Niroshan
+ */
+public class Assign_Queue {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       //Create string
+       Queue<String> queue1=new LinkedList<>();
+     
+        
+        //print size
+        System.out.println("Size of queue: "+queue1.size());
+        
+        //add elements
+        queue1.add("Akal");
+        queue1.add("Thanu");
+        queue1.add("Niro");
+        queue1.add("Milux");
+        queue1.add("Shabee");
+        
+        //print size
+        System.out.println("Size of queue: "+queue1.size());
+        
+        //print first element
+        System.out.println("Head element: "+queue1.element());
+        
+        //print elements
+        System.out.println("Show elements: "+queue1);
+        
+        String title;
+        
+        // using Poll
+        title=queue1.poll();
+        //System.out.println("Poll queue: "+queue1.poll());
+        System.out.println("\nPoll queue: "+title);  
+        System.out.println("Show elements: "+queue1); 
+        
+        
+        //using peek
+        title=queue1.peek();
+        System.out.println("\nPeek Queue: "+title);
+        System.out.println("Show elements: "+queue1); 
+        
+        
+        System.out.println("Integer: "+queue1);
+        
+        //Iterator print
+        System.out.println("\nIterator print: ");
+        Iterator<String> iter=queue1.iterator();
+        while(iter.hasNext()){
+            System.out.println(iter.next());
+        }
+    }
+    
+}

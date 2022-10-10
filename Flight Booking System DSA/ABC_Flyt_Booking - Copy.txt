@@ -1,0 +1,215 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package abc_flyt_booking;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+public class ABC_Flyt_Booking {
+    public static void main(String[] args) {
+       
+        //Scanner
+        Scanner in=new Scanner(System.in);
+        System.out.println("*********ABC Charted Flight Booking*********\n");
+        System.out.println("Welcome!\n");
+        //Queue login
+        Queue<String> login=new LinkedList<>();
+        login.add("1. Login");
+        login.add("2. Exit");
+        // iterator
+        Iterator<String> iterlog=login.iterator();
+        while(iterlog.hasNext()){
+            System.out.println(iterlog.next());
+        }
+        System.out.println("Please choose one: ");
+        int log;
+        log=in.nextInt();
+        
+        switch (log) {
+            case 1:
+                //start1
+                System.out.println("Enter your Username: ");
+                String mail;
+                mail=in.next();
+                String mailId="Akal@gmail";
+                if(mail.equals(mailId)){
+                    System.out.println("Enter your password: ");
+                    int pw;
+                    pw=in.nextInt();
+                    int pwId=1991;
+                    if(pw==pwId){
+                        System.out.println("Successfully login home!");
+                        //queue functions
+                        Queue<String> Functions=new LinkedList<>();
+                        Functions.add("1. Flight schedule status ");
+                        Functions.add("2. Create new booking");
+                        Functions.add("3. Show bookings");
+                        Functions.add("4. Cancel reservations");
+                        Functions.add("5. Logout");
+                        // iterator
+                        Iterator<String> iterfunction=Functions.iterator();
+                        while(iterfunction.hasNext()){
+                            System.out.println(iterfunction.next());
+                        }
+                        System.out.println("Choose your need number: ");
+                        int need=in.nextInt();
+                        switch (need) {
+                            case 1:
+                                System.out.println("Successfully login Flight schedule!");
+                                 //queue functions
+                        Queue<String> available=new LinkedList<>();
+                        available.add("1. Ready to go!");
+                        available.add("2. Not ready");
+                        available.add("3. Back");
+                        // iterator
+                        Iterator<String> iteravailable=available.iterator();
+                        while(iteravailable.hasNext()){
+                            System.out.println(iteravailable.next());
+                        }
+                        System.out.println("Status for flight? ");
+                        int avlb=in.nextInt();
+                        switch(avlb){
+                            case 1:
+                            System.out.println("People who have already reserved are being sent an email.."+"\nSucessfully sent email!");
+                            break;
+                            case 2:
+                            System.out.println("waiting those who have already booked..");
+                            break;
+                            case 3:
+                             while(iterfunction.hasNext()){
+                            System.out.println(iterfunction.next()); //xxxxxxxcheck
+                        }
+                            break;
+                            default:
+                                System.out.println("Invalid function!");
+                                break;
+                            
+                        }
+                                break;
+                        //end functions
+                            case 2:
+                                System.out.println("Sucessfully login new booking!"+"\nAvailable seats are: ");
+                                //seats
+                                Queue<String> seats=new LinkedList<>();
+                                seats.add("Seat 1");
+                                seats.add("Seat 2");
+                                seats.add("Seat 3");
+                                seats.add("Seat 4");
+                                seats.add("Seat 5");
+                                //end seats
+                                System.out.println(seats+" "+"\nSelect one seat: ");
+                                int sltseat=in.nextInt();
+                                switch(sltseat){
+                                    case 1:
+                                        String seatno=seats.poll();
+                                        System.out.println("You are select "+seatno+"\nEnter passenger name: ");
+                                        String name=in.next();
+                                        System.out.println("Enter passenger nic: ");
+                                        String nic=in.next();
+                                        System.out.println("Enter passenger phone number: ");
+                                        int phoneno=in.nextInt();
+                                        System.out.println("\nPassenger details are:"+"\nSeat          :"+seatno+"\nFull name    : "+name+"\nNIC no        : "+nic+"\nPhone number  : "+phoneno);
+                                        System.out.println("Reserversion are:");
+                                         Queue<String> reserve=new LinkedList<>();
+                                        reserve.add("1. Confirm");
+                                        reserve.add("2. Cancel");
+                                        Iterator<String> iterreserv=reserve.iterator();
+                                        while(iterreserv.hasNext()){
+                                        System.out.println(iterreserv.next());
+                                        }
+                                        System.out.println("Enter :");
+                                        int reserv=in.nextInt();
+                                        if(reserv==1){
+                                            System.out.println("Successfully booked!"+"\nNow available seats are: \n"+seats);
+                                        }
+                                        else if(reserv==2){
+                                            System.out.println("Booking process cancelled!");
+                                        }
+                                        else{
+                                            System.out.println("Invalid number!");
+                                        }
+                                        break;
+                                }
+                                
+                                break;
+                            case 3:
+                                System.out.println("Booking Details");
+                                //bookdetail
+                               
+                                  Queue<String> bookdetail=new LinkedList<>();
+                                System.out.println("Seats    Names    NIC         Phone No\n");
+                                bookdetail.add("Seat 1 - Akalya   974854125v  778965412");
+                                bookdetail.add("Seat 6 - Milux    965481526v  778545254");
+                                bookdetail.add("Seat 7 - Sara     952158623v  770123450");
+                                bookdetail.add("Seat 8 - Thanu    985421820v  765489302");
+                                bookdetail.add("Seat 9 - Mukil    921578962v  778545666");
+                                //end seats
+                              Iterator<String> iterbookdetail=bookdetail.iterator();
+                              while(iterbookdetail.hasNext()){
+                              System.out.println(iterbookdetail.next());
+                              }
+                              Queue<String> actions=new LinkedList<>();
+                               // System.out.println("Seats    Names    NIC         Phone No\n");
+                                actions.add("1. Remove");
+                                actions.add("2. Sent email");
+                                actions.add("3. Exit");
+                                Iterator<String> iteraction=actions.iterator();
+                              while(iteraction.hasNext()){
+                              System.out.println(iteraction.next());
+                              }
+                                System.out.println("Enter: ");
+                                int Staction=in.nextInt();
+                                switch(Staction){
+                                    case 1:
+                                        System.out.println("Enter the seat number: ");
+                                        int snum=in.nextInt();
+                                        switch(snum){
+                                            case 1:
+                                                String remove=bookdetail.poll();
+                                                System.out.println("Seat booking detail is successfully removed!"+"\nBooking details after removing: "+"\nSeats    Names    NIC         Phone ");
+                                                
+                                                System.out.println("\n"+bookdetail);
+                                        }
+                                        break;
+                                }
+                                //end bookdetail
+                                break;
+                            case 4:
+                                System.out.println("Canceled reservations");
+                              // Iterator<String> iterbookdetail=bookdetail.iterator();
+                              // while(iterbookdetail.hasNext()){
+                              // System.out.println(iterbookdetail.next());
+                              // }
+                                break;
+                            case 5:
+                                System.out.println("Sucessfully logout!");
+                                break;
+                            default:
+                                System.out.println("Invalid function!");
+                                break;
+                        }
+                    }//end correct pw
+                    else{
+                        System.out.println("Invalid password!");
+                    }
+                }
+                else{
+                    System.out.println("Invalid username!");
+                }   break;
+            case 2:
+                //exit
+                System.out.println("Thankyou for coming!");
+                break;
+            default:
+                //end1
+                System.out.println("Invalid number!");
+                break;
+        }
+    }
+
+    
+}

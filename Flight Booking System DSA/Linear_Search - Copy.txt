@@ -1,0 +1,37 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package linear_search;
+import java.util.Scanner;
+public class Linear_Search {
+    public static void main(String[] args) {
+       int numbers, num, search, array[];  
+   //num array size
+    Scanner in = new Scanner(System.in);  
+    System.out.println("Enter the number of elements");  
+    num = in.nextInt();   
+    array = new int[num];  //array size
+   
+    System.out.println("Enter those " + num + " elements");  
+   
+    for (numbers = 0; numbers < num; numbers++)  
+      array[numbers] = in.nextInt();  //stores numbers
+   
+    System.out.println("Enter value to find");  
+    search = in.nextInt();  
+   
+    for (numbers = 0; numbers < num; numbers++)  
+    {  
+      if (array[numbers] == search)     //Searching element is present  
+      {  
+         System.out.println(search + " is found at location " + (numbers + 1) + ".");  
+          break;  
+      }  
+   }  
+   if (numbers == num)  // Element to search isn't present 
+      System.out.println(search + " isn't in array.");  
+  }  
+    }
+    

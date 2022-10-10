@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assign_stack;
+
+import java.util.Stack;
+
+/**
+ *
+ * @author Niroshan
+ */
+public class Assign_Stack {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+         Stack <String> stackelements =new Stack();
+        
+        //Add elements
+        stackelements.push("Akal");
+        stackelements.push("Niro");
+        stackelements.push("Milux");
+        stackelements.push("Thanu");
+        
+        System.out.println("Stack elements: "+stackelements);
+        
+        //remove last elements/pop
+        String name= stackelements.pop();
+        System.out.println("\nPop element "+name);
+        System.out.println("Stack elements after pop remove: "+stackelements);
+        
+        //peek
+        String peek= stackelements.peek();
+        System.out.println("\nPeek element "+peek);
+        System.out.println("Stack elements after peek : "+stackelements);
+        
+        //check empty
+        System.out.println("\nstatus of stack "+stackelements.isEmpty());
+        
+        //size
+        System.out.println("\nsize of stack "+stackelements.size());
+        
+        //search
+        //searchntln("SEARCH element: "+stackofcards.search("King")
+        int search= stackelements.search("Akal");
+        System.out.println("\nSearch element: "+search);
+        
+        
+             if(search !=-1){
+            System.out.println("founded! location "+search); 
+        }
+        else
+        {
+            System.out.println("Not Found");
+        }
+       
+    }}
+    
