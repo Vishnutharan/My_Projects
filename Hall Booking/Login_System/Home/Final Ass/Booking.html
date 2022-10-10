@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort booking form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="db_action/create.php" method="get">
+            <div id="form">
+                <h1 class="text-white text-center">Booking Now</h1>
+
+                <div id="first-group">
+
+                    <div id="content">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" id="input-group" name="fname" placeholder="First name">
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input type="number" id="input-group" name="pnom" placeholder="Phone number">
+                    </div>
+
+                    <div id="content">
+                       <i class="fa fa-users" aria-hidden="true" ></i>
+                        <select id="input-group" name ="halltype" style="background-color: black;">
+                            <option value="">               Hall Type</option>
+                            <option value="wedding">        Wedding</option>
+                            <option value="birthday Party"> Birthday Party</option>
+                            <option value="Meetings">       Meetings</option>
+                        </select>
+                    </div>
+                    
+        
+                    <div id="content">
+                        <i class="fa fa-users" aria-hidden="true"  ></i>
+                        <select id="input-group" name="numgust" style="background-color: black;">
+                            <option value="">No.of guests</option>
+                            <option value="more than 100">  more than 100</option>
+                            <option value="more than 300">  more than 300</option>
+                            <option value="more than 500">  more than 500</option>
+                            <option value="more than 1000"> more than 1000</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div id="second-group">
+
+                    <div id="content">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" id="input-group" name="lname" placeholder="Last name">
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <input type="email" id="input-group" name="mail" placeholder="Email">
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-users" aria-hidden="true"  ></i>
+                        <select id="input-group" name ="ac" style="background-color: black;">
+                            <option value="">       AC/ Non AC</option>
+                            <option value="AC">     AC</option>
+                            <option value="Non-AC"> Non-AC</option>
+                        </select> 
+                    </div>
+                    
+                         <div id="content">
+                          <input type="date" id="date" name="date">
+                    </div>
+            
+                </div>
+                <button type="submit" name="submit" value="submit" id="submit-btn">Book Now</button>
+                </div>
+                </form>
+    </div>
+</body>
+</html>
